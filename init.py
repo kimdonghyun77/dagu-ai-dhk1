@@ -1,8 +1,6 @@
 import sqlite3
-sqlite3.connect('data.db')
-import sqlite3
-con1 = sqlite3.connect('data.db')
-cursor = con1.cursor()
+connect = sqlite3.connect('data.db')
+cursor = connect.cursor()
 cursor.execute('''
     CREATE TABLE topics (
         id        INTEGER      PRIMARY KEY AUTOINCREMENT,
@@ -10,3 +8,5 @@ cursor.execute('''
         body      TEXT
     )
 ''')
+cursor.close()
+connect.close()
