@@ -10,3 +10,5 @@ cursor.execute('''
 ''')
 cursor.close()
 connect.close()
+
+<!-- print(title, body) 최초commit-->
